@@ -21,6 +21,15 @@ class Badge extends Select
      */
     public function colors($map)
     {
-        return $this->withMeta(['colorMap' => $map]);
+        return $this->withMeta([
+            'colorMap' => $map
+        ]);
+    }
+
+    public function defaultColor($map)
+    {
+        return $this->withMeta([
+            'defaultMap' => $map
+        ]);
     }
 }
