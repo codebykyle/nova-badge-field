@@ -1,22 +1,31 @@
 export default {
     methods: {
-        backgroundColor: function () {
-            let value = this.field.colorMap[this.field.value];
-
-            if (value.hasOwnProperty('background')) {
-                return value.background;
+        backgroundColor: function (forValue) {
+            if (!this.field.colorMap.hasOwnProperty(forValue)) {
+                return '#333';
             }
 
-            return value;
-        },
-        textColor: function () {
-            let value = this.field.colorMap[this.field.value];
+            let colorMapElement = this.field.colorMap[forValue];
 
-            if (value.hasOwnProperty('color')) {
+            if (colorMapElement.hasOwnProperty('background')) {
+                return colorMapElement.background;
+            }
+
+            return colorMapElement;
+        },
+
+        textColor: function (forValue) {
+            if (!this.field.colorMap.hasOwnProperty(forValue)) {
+                return '#333';
+            }
+
+            let colorMapElement = this.field.colorMap[this.field.value];
+
+            if (colorMapElement.hasOwnProperty('color')) {
                 return value.color;
             }
 
-            let color = value;
+            let color = colorMapElement;
 
             //if only first half of color is defined, repeat it
             if (color.length < 5) {

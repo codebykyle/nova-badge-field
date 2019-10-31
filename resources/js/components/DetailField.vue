@@ -6,11 +6,11 @@
             >{{ __(field.value) }}</span>
         </template>
     </panel-item>
-
 </template>
 
 <script>
     import colors from '../mixins/colors';
+
     export default {
         props: ['resource', 'resourceName', 'resourceId', 'field'],
         mixins: [colors]
