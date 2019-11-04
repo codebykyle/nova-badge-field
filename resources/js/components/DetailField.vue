@@ -6,7 +6,7 @@
                     backgroundColor: backgroundColor(this.formattedValue),
                     color: textColor(this.formattedValue)
                   }"
-            >{{ __(field.formattedValue) }}</span>
+            >{{ __(this.formattedValue) }}</span>
         </template>
     </panel-item>
 </template>
