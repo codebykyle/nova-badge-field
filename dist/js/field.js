@@ -257,7 +257,7 @@ module.exports = function normalizeComponent (
         },
         formattedValue: function formattedValue() {
             if (this.isValueEmpty) {
-                return 'None';
+                return '—';
             }
 
             return this.field.value;

@@ -6,7 +6,7 @@ export default {
 
         formattedValue() {
             if (this.isValueEmpty) {
-                return 'None'
+                return '—';
             }
 
             return this.field.value
