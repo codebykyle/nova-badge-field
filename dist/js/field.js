@@ -253,14 +253,14 @@ module.exports = function normalizeComponent (
 /* harmony default export */ __webpack_exports__["a"] = ({
     computed: {
         isValueEmpty: function isValueEmpty() {
-            return this.value == null;
+            return this.field.value == null;
         },
         formattedValue: function formattedValue() {
             if (this.isValueEmpty) {
                 return 'None';
             }
 
-            return this.value;
+            return this.field.value;
         }
     }
 });
