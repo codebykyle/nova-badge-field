@@ -1,7 +1,7 @@
 export default {
     computed: {
         isValueEmpty() {
-            return this.value == null;
+            return this.field.value == null;
         },
 
         formattedValue() {
@@ -9,7 +9,7 @@ export default {
                 return 'None'
             }
 
-            return this.value
+            return this.field.value
         }
     }
 }
